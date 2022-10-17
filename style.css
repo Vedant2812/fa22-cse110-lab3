@@ -1,7 +1,7 @@
 body {
   background-color: indigo;
-  font-family: Open Sans, "Medium 500 italic", sans-serif;
   color: hsl(40, 30%, 20%);
+  font-family: Open Sans, "Medium 500 italic", sans-serif;
 }
 
 p:hover,h2 {
@@ -9,7 +9,7 @@ p:hover,h2 {
 }
 
 p.paragraph {
-  color-background: brown;
+  background-color: brown;
 }
 
 a[href="https://youtu.be/dQw4w9WgXcQ"] {
@@ -17,12 +17,12 @@ a[href="https://youtu.be/dQw4w9WgXcQ"] {
 }
 
 div {
-  flex-shrink: 1;
-  flex-flow: column wrap;
   flex: none;
-  grid-column-start: 1;
-  grid-column-end: four;
+  flex-flow: column wrap;
+  flex-shrink: 1;
   grid-area: header;
+  grid-column-end: four;
+  grid-column-start: 1;
 }
 
 #one {
@@ -33,16 +33,12 @@ div {
   background-color: indigo;
 }
 
-@media (width <= 100em) {
+@media (max-width: 100em) {
   h1 { /*for biggest header*/
     color: navy;
-    text-decoration: underline;
     text-align: center;
+    text-decoration: underline;
   }
-}
-
-h2 {  /*for second biggest header*/
-  color: rgb(240, 240, 100);
 }
 
 h3 {  /*for third biggest header*/
@@ -51,14 +47,15 @@ h3 {  /*for third biggest header*/
 }
 
 ul li{
-  border-style: inset;
   border-color: blue;
-  padding: .3em;
+  border-style: inset;
   margin: 5px;
+  padding: .3em;
 }
 
 ol > li{
   color: red;
+  margin-top: -10px;
 }
 
 div + body {
@@ -70,22 +67,21 @@ p ~ body {
 }
 
 .bx {
-  margin_top: -10px;
-  padding-top: 5%;
   display: inline;
-  height: 10vh;
-  width: 10ex;
+  padding-top: 5%;
   position: fixed;
 }
 
 ol {
-  padding: 5pt;
-  border-width: 3cm;
   border-radius: 20px;
+  border-width: 3cm;
+  height: 10vh;
   margin: auto;
   max-width: 20px;
   max-width: 5px;
+  padding: 5pt;
   position: static;
+  width: 10ex;
 }
 
 .btton:hover > body{
